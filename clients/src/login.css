@@ -1,0 +1,100 @@
+.background{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.486);
+    
+    height: 100%;
+    width: 100%;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url(Images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.admin_card{
+    margin-top: 5rem;
+    background-color: rgba(15, 236, 33, 0.555);
+    padding: 3rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.288),
+                15px 15px 15px rgba(0, 0, 0, 0.388);
+}
+.admin{
+    margin-bottom: 0.5rem;
+    font-size: larger;
+    font-weight: bolder;
+    color: #365c89;
+}
+.input-box{
+    margin: 25px 0;
+    height: 2rem;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 1rem;
+    color: white;
+    font-size: 15px;
+    padding: 0.3rem;
+   
+  }
+  .input-box input::placeholder{
+    color: wheat;
+  }
+  .check-box{
+    text-align: left;
+    color: white;
+    padding-top: 0.3rem;
+  }
+  .submit-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    align-items: flex-end;
+  }
+  .submit-btn input{
+    color: white;
+    font-size: 15px;
+    padding: 0.7rem;
+    background-color: #365c89;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .submit-btn input:hover{
+    background-color: #914790;
+  }
+  .submit-btn a{
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .submit-btn a:hover{
+    text-decoration: underline;
+  }
+  p{
+    margin-top: 3rem;
+    text-align: left;
+    font-size: 15px;
+    color: white;
+  }
+  p a{
+    margin-top: 3rem;
+    text-align: left;
+    font-size: 18px;
+    color: blue;
+    text-decoration: none;
+  }
+  p a:hover{
+    text-decoration: underline;
+  }
+  
