@@ -1,0 +1,158 @@
+.Topbar{
+    background-color: rgb(235, 230, 230);
+   
+}
+.Topbar h2 {
+    margin: auto;
+
+}
+.Topbar_box{
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.box1{
+    background-color: rgba(15, 236, 33, 0.5);
+   
+    width: 32%;
+    gap: 1rem;
+    border-radius: 7px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.288),
+                15px 15px 15px rgba(0, 0, 0, 0.388);
+
+}
+
+/*.... Sidebar ....*/
+
+.Sidebar{
+    background-color: rgb(235, 230, 230);
+    width: 30%;
+    float: left;
+    height: 100vh;
+}
+.sidebar_img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Sidebar h4{
+    display: block;
+    text-align: center;
+}
+.sidebar_bnt{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.sidebar_bnt button{
+    font-size: 15px;
+    padding: 0.7rem;
+    background-color: rgba(15, 236, 33, 0.5);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.sidebar_bnt button:hover{
+    box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.288),
+                5px 5px 5px rgba(0, 0, 0, 0.388); 
+}
+.btn2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*.... Booking....*/
+
+.Booking{
+    background-color: rgb(235, 230, 230);
+    width: 70%;
+    float: right;
+    height: 100vh;
+    
+}
+.Booking_form{
+    padding-left: 2rem;
+}
+.Booking p{
+    color:black;
+    margin: auto;
+    font-size: large;
+    font-weight: bold;
+}
+.Booking_input1{
+    margin: 3rem 0px;
+    height: 1.5rem;
+}
+.Booking_input1 input{
+    width: 70%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 0.7rem;
+    color: black;
+    font-size: 15px;
+    padding: 0.3rem;
+}
+.Booking_input3{
+    margin: 1rem 0px;
+}
+.Booking_input3 select{
+    width: 50%;
+    height: 70%;
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 0.7rem;
+    color: black;
+    font-size: 15px;
+    padding: 0.3rem;
+}
+.Booking_input4{
+    margin: 1rem 0px;
+}
+.Booking_input4 input{
+    width: 20%;
+    height: 60%;
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 0.7rem;
+    color: black;
+    font-size: 15px;
+    padding: 0.3rem;
+}
+.btn input{
+    font-size: 15px;
+    padding: 0.7rem;
+    background-color: rgba(15, 236, 33, 0.5);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn input:hover{
+    box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.288),
+                5px 5px 5px rgba(0, 0, 0, 0.388); 
+}
+
+/*.........*/
+
+.List{
+    background-color: rgb(235, 230, 230);
+    width: 70%;
+    float: right;
+    height: 100vh;
+}
+
+/*.........*/
+.Delete{
+    background-color: rgb(235, 230, 230);
+    width: 70%;
+    float: right;
+    height: 100vh;
+}
