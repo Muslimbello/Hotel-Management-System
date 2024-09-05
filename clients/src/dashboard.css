@@ -1,0 +1,12 @@
+.Topbar{
+    background-color: red;
+}
+.Topbar_box{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+
+}
+.box1{
+    background-color: green;
+}

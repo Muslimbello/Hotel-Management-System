@@ -1,12 +1,23 @@
-import { Link } from "react-router-dom";
-const Dashbord = () => {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Topbar from "./component/topbar";
+import Sidebar from "./component/sidebar";
+import Booking from './component/booking';
+import Delete from './component/delete-client';
+import List from './component/list-client';
+const Dashbord = ({match}) => {
         return (
-            <div className="dashbord">
-                
-                <Link to ='/login'> <input type="submit"/>delet </Link>
-                <Link to ='/login'> <input type="submit"/>update</Link>
-                <Link to ='/login'> <input type="submit"/>add</Link>
-            </div>
+    <main>
+        <Topbar />
+        
+        <Sidebar />
+        <Routes>
+            <Route  path='Delete' element={<Delete />} />
+            <Route path='list' element={<List />} />
+            <Route  index element={<Booking />} />
+        </Routes>
+    
+     </main>
     
         );
 }
