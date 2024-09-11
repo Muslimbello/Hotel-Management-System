@@ -159,4 +159,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     # Add your production frontend URL here when deploying
 ]
-AUTH_USER_MODEL = "yourappname.User"
+AUTH_USER_MODEL = "app_auth.User"

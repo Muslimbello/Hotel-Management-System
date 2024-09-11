@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from yourappname.models import User  # Import your custom User model
+from .models import User  # Import your custom User model
 from django.contrib.auth.password_validation import validate_password
 
 
@@ -12,17 +12,14 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User  # Reference your custom User model
-        fields = (
-            "email",
-            "password",
-        )  # Use email field
+        fields = ("email", "password", "confirm_password")  # Use email field
 
-    # def validate(self, attrs):
-    #     if attrs["password"] != attrs["confirm_password"]:
-    #         raise serializers.ValidationError(
-    #             {"password": "Password fields didn't match."}
-    #         )
-    #     return attrs
+    def validate(self, attrs):
+        if attrs["password"] != attrs["confirm_password"]:
+            raise serializers.ValidationError(
+                {"password": "Password fields didn't match."}
+            )
+        return attrs
 
     def create(self, validated_data):
         user = User.objects.create(
