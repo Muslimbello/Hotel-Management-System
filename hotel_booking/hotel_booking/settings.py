@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "" "bookings",
+    "bookings",
     "app_auth",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -152,3 +154,9 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=90),
 }
+# CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    # Add your production frontend URL here when deploying
+]
+AUTH_USER_MODEL = "yourappname.User"
