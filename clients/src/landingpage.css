@@ -1,0 +1,309 @@
+/*.. Background image for header.*/
+.load {
+  animation: slide 2s;
+}
+.slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  animation: slide 10s infinite;
+}
+.content {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.principle {
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes slide {
+  0% {
+    background-image: url(Images/Hotel_Room.jpg);
+  }
+  50% {
+    background-image: url(Images/Hotel_Room.jpg);
+  }
+  50.1% {
+    background-image: url(Images/lbg3.jpg);
+  }
+  100% {
+    background-image: url(Images/lbg3.jpg);
+  }
+}
+
+/*.. Header of the Landingpage ..*/
+
+.bgi {
+  background-color: white;
+  text-align: center;
+}
+.header {
+  background-color: transparent;
+}
+.landingpage_head {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+}
+.landingpage_center {
+  text-align: center;
+}
+.landingpage_center h3 {
+  font-size: 50px;
+  font-weight: 100;
+}
+.landingpage_center h1 {
+  font-size: 70px;
+  font-family: merriweather;
+  padding-top: 2rem;
+}
+.landingpage_center h6 {
+  font-weight: 90;
+  font-family: lpacifco;
+}
+.landingpage_center button {
+  border: none;
+  background-color: green;
+  border-radius: 20px;
+  color: white;
+  padding: 3px 25px;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.4),
+    -3px -3px 3px -1px rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+  transition: 500ms;
+  margin-top: 2em;
+  width: 30%;
+  height: 6vh;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.landingpage_center button:hover {
+  transform: scale(1.1);
+}
+
+/*.. About Section Style ..*/
+
+.About {
+  width: 85%;
+  height: 84vh;
+  margin: auto;
+}
+.About h2 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.About_box {
+  display: flex;
+  justify-content: space-between;
+}
+.About_card_1 {
+  position: relative;
+  width: 40%;
+}
+.About_card_2 {
+  width: 60%;
+  height: 100%;
+}
+.About_card_2 h3 {
+  font-size: 70px;
+  font-weight: bolder;
+}
+.About_card_box {
+  height: 25%;
+  width: 18%;
+  position: absolute;
+  display: inline-block;
+  background-color: green;
+  color: white;
+  left: -9px;
+  bottom: -9px;
+}
+.About_card_box h4 {
+  font-size: 35px;
+  font-weight: bolder;
+  margin-top: 0.5em;
+  margin-bottom: auto;
+  text-align: center;
+}
+.About_card_box p {
+  font-size: 10px;
+  font-weight: 100;
+  text-align: center;
+  padding: 0.1em;
+}
+.About_card_1 img {
+  height: 100%;
+  width: 95%;
+  object-fit: cover;
+}
+.About_card1 {
+  display: flex;
+  justify-content: space-around;
+}
+.About_card1_box p {
+  color: black;
+}
+.About_card1_box h4 {
+  font-family: "Vladimir Script", cursive;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.About_card1_box img {
+  width: 60px;
+  height: 60px;
+  float: left;
+  border-radius: 50%;
+}
+.About_card1_box h5 {
+  margin: 0.2em;
+  font-weight: bold;
+  padding-top: 0.3em;
+}
+.About_card1_box h4 {
+  margin: -0.6em;
+  font-weight: bold;
+  text-align: center;
+  font-family: Brittany;
+}
+
+/*.. Galley section style..*/
+
+.Galley h1 {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.Galley_card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.Galley_card1 {
+  height: 40vh;
+  width: 31%;
+  background-image: url(Images/family-room.png);
+  background-size: cover;
+}
+.Galley_card2 {
+  height: 40vh;
+  width: 31%;
+  background-image: url(Images/single-room.jpg);
+  background-size: cover;
+}
+.Galley_card3 {
+  height: 40vh;
+  width: 31%;
+  background-image: url(Images/pool.jpg);
+  background-size: cover;
+}
+.Galley_card4 {
+  height: 40vh;
+  width: 31%;
+  background-image: url(Images/bar.jpg);
+  background-size: cover;
+}
+.Galley_card5 {
+  height: 40vh;
+  width: 31%;
+  background-image: url(Images/playing.jpg);
+  background-size: cover;
+}
+.Galley_card6 {
+  height: 40vh;
+  width: 31%;
+  background-image: url(Images/Hotel_Room.jpg);
+  background-size: cover;
+}
+.Galley_card_cover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Galley_card1 p {
+  background-color: green;
+  float: right;
+  color: white;
+  margin-top: 1em;
+  padding: 0.4em;
+}
+.Galley_card2 p {
+  background-color: green;
+  float: right;
+  color: white;
+  margin-top: 1em;
+  padding: 0.4em;
+}
+.Galley_card3 p {
+  background-color: green;
+  float: right;
+  color: white;
+  margin-top: 1em;
+  padding: 0.4em;
+}
+.Galley_card4 p {
+  background-color: green;
+  float: right;
+  color: white;
+  margin-top: 1em;
+  padding: 0.4em;
+}
+.Galley_card5 p {
+  background-color: green;
+  float: right;
+  color: white;
+  margin-top: 1em;
+  padding: 0.4em;
+}
+.Galley_card6 p {
+  background-color: green;
+  float: right;
+  color: white;
+  margin-top: 1em;
+  padding: 0.4em;
+}
+
+/*.. Footer Section Style ..*/
+
+.Footer {
+  height: 50vh;
+  background-color: gray;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+.footer_box {
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  gap: 1em;
+}
+.footer_box_card1 {
+  width: 30%;
+}
+.footer_box_card {
+  width: 30%;
+}
+.footer_box_card p {
+  color: black;
+}
+.footer_box_card i {
+  color: green;
+  padding-left: 0.5em;
+  font-size: larger;
+}
+.footer_box_card h4 {
+  font-size: larger;
+  font-weight: 600;
+}
