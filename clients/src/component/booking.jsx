@@ -35,7 +35,6 @@ const Booking = () => {
       checkOutDate
     );
     alert("successfull");
-    return;
     try {
       await axios.post("https://localhost:8000/booking/", {
         clientName,
@@ -48,9 +47,13 @@ const Booking = () => {
       });
       // Handle successful submission (e.g., redirect or show success message)
       alert("successfull");
-    } catch (error) {
+    } catch (erro) {
       // Display only the error message instead of the entire object
-      console.log(error);
+      if (err.response && err.response.data) {
+        setError(err.response.data.message); // Display the specific error message
+      } else {
+        setError("Booking failed. Please try again later.");
+      }
     }
   };
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./landingpage.css";
-import { Modal } from "./component/modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Gallery from "./component/gallery";
 import Container from "react-bootstrap/Container";
@@ -9,9 +8,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import About from "./component/about";
 import Footer from "./component/footer";
+import CustomModal from "./component/modal"; // Import the custom modal
 
 const Landingpage = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
       <div className="slider">
@@ -52,21 +55,14 @@ const Landingpage = () => {
                 </h6>
                 <h6>Sigin To Boook Your Reservation</h6>
 
-                <button
-                  className="button-nav"
-                  onClick={() => {
-                    console.log("clicked");
-                    setShowModal(true);
-                  }}
-                >
-                  Sigupmmmm
-                </button>
+                <button onClick={handleShow}>Book Reservation</button>
+
+                <CustomModal show={show} handleClose={handleClose} />
               </div>
             </div>
           </div>
         </div>
       </div>
-      {showModal && <Modal closeModal={setShowModal} />}
       <About />
       <Gallery />
       <Footer />

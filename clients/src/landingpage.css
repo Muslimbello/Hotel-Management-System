@@ -273,6 +273,70 @@
   padding: 0.4em;
 }
 
+/*... Modal Section...*/
+
+.modal_form {
+  padding-left: 2rem;
+}
+.modal p {
+  color: black;
+  margin: auto;
+  font-size: large;
+  font-weight: bold;
+}
+.modal_input1 {
+  margin: 3rem 0px;
+  height: 1.5rem;
+}
+.modal_input1 input {
+  width: 70%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid green;
+  border-radius: 0.7rem;
+  color: black;
+  font-size: 15px;
+  padding: 0.3rem;
+}
+.modal_input3 {
+  margin: 1rem 0px;
+}
+.modal_input3 select {
+  width: 50%;
+  height: 70%;
+  background-color: transparent;
+  border: 1px solid green;
+  border-radius: 0.7rem;
+  color: black;
+  font-size: 15px;
+  padding: 0.3rem;
+}
+.modal_input4 {
+  margin: 1rem 0px;
+}
+.modal_input4 input {
+  width: 20%;
+  height: 60%;
+  background-color: transparent;
+  border: 1px solid green;
+  border-radius: 0.7rem;
+  color: black;
+  font-size: 15px;
+  padding: 0.3rem;
+}
+.btnm input {
+  font-size: 15px;
+  padding: 0.7rem;
+  background-color: rgba(15, 236, 33, 0.5);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btnm input:hover {
+  box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.288),
+    5px 5px 5px rgba(0, 0, 0, 0.388);
+}
+
 /*.. Footer Section Style ..*/
 
 .Footer {
