@@ -14,7 +14,7 @@ const Loginpage = () => {
   const fatchUserData = async () => {
     try {
       // Replace the URL with the actual API URL
-      const response = await axios.get("https://api.com/users");
+      const response = await axios.get("http://localhost:8000/api/auth/login/");
       setUserData(response.data); //correctly set user data
     } catch (err) {
       if (err.response && err.response.data) {

@@ -47,7 +47,7 @@ const Booking = () => {
       });
       // Handle successful submission (e.g., redirect or show success message)
       alert("successfull");
-    } catch (erro) {
+    } catch (err) {
       // Display only the error message instead of the entire object
       if (err.response && err.response.data) {
         setError(err.response.data.message); // Display the specific error message
