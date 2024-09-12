@@ -42,7 +42,7 @@ const Register = () => {
 
     // Make a POST request to the server with user data
     try {
-      await axios.post("https://localhost:8000/", {
+      await axios.post("http://localhost:8000/api/auth/register/", {
         username,
         email,
         password,

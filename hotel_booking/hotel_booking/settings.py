@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+import dj_database_url
+
+# from dotenv import load_dotenv
 from datetime import timedelta
 
-load_dotenv()
+# load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +32,8 @@ SECRET_KEY = "django-insecure-kdyke&)&nj5$u88yz#0%u*x-sj4vpkbk&vqdo^j&%sf^c6%41g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["BG$.onrender.com"]
 
 
 # Application definition
@@ -93,14 +96,30 @@ WSGI_APPLICATION = "hotel_booking.wsgi.application"
 #         "PORT": os.environ["DB_PORT"],
 #     }
 # }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+# DATABASES = {"default": dj_database_url.config(conn_max_age=600)}
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("DB_NAME", "your_local_db_name"),
+        "USER": os.environ.get("DB_USER", "your_local_db_user"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "your_local_db_password"),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 
-
+# Use dj_database_url for Render or cloud deployment
+if os.getenv(
+    "RENDER_DATABASE_URL"
+):  # or any condition that distinguishes your prod environment
+    DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -133,9 +152,12 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
