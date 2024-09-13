@@ -89,9 +89,9 @@
 /*.. About Section Style ..*/
 
 .About {
-  width: 85%;
-  height: 84vh;
+  max-width: 85%;
   margin: auto;
+  height: 100%;
 }
 .About h2 {
   text-align: center;
@@ -101,55 +101,37 @@
 .About_box {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .About_card_1 {
-  position: relative;
-  width: 40%;
+  max-width: 40%;
 }
 .About_card_2 {
-  width: 60%;
-  height: 100%;
+  max-width: 60%;
 }
 .About_card_2 h3 {
   font-size: 70px;
   font-weight: bolder;
 }
-.About_card_box {
-  height: 25%;
-  width: 18%;
-  position: absolute;
-  display: inline-block;
-  background-color: green;
-  color: white;
-  left: -9px;
-  bottom: -9px;
-}
-.About_card_box h4 {
-  font-size: 35px;
-  font-weight: bolder;
-  margin-top: 0.5em;
-  margin-bottom: auto;
-  text-align: center;
-}
-.About_card_box p {
-  font-size: 10px;
-  font-weight: 100;
-  text-align: center;
-  padding: 0.1em;
-}
+
 .About_card_1 img {
-  height: 100%;
   width: 95%;
   object-fit: cover;
+  height: auto;
 }
 .About_card1 {
   display: flex;
   justify-content: space-around;
 }
-.About_card1_box p {
+.About_card2_box {
+  padding: 10px;
+  text-align: center;
+}
+.About_card2_box p {
   color: black;
 }
-.About_card1_box h4 {
+.About_card2_box h4 {
   font-family: "Vladimir Script", cursive;
   font-size: 24px;
   font-weight: 300;
@@ -158,22 +140,54 @@
 
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-.About_card1_box img {
+.About_card2_box img {
   width: 60px;
   height: 60px;
   float: left;
   border-radius: 50%;
 }
-.About_card1_box h5 {
-  margin: 0.2em;
-  font-weight: bold;
-  padding-top: 0.3em;
+@media (max-width: 768px) {
+  .About_box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .About_card_1,
+  .About_card_2 {
+    max-width: 90%;
+  }
+
+  .About_card_box,
+  .About_card1_box {
+    padding: 5px;
+  }
+  .About_card_2 h3 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .About_card2_box {
+    padding: 10px;
+    text-align: justify;
+    overflow: scroll;
+    height: 58vh;
+  }
+  .About {
+    height: 100vh;
+  }
 }
-.About_card1_box h4 {
-  margin: -0.6em;
-  font-weight: bold;
-  text-align: center;
-  font-family: Brittany;
+
+@media (max-width: 1024px) {
+  .About_card_2 h3 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .About_card2_box {
+    padding: 10px;
+    text-align: justify;
+    overflow: scroll;
+  }
+  .About {
+    height: 100%;
+  }
 }
 
 /*.. Galley section style..*/
