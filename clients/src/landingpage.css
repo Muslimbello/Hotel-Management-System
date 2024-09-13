@@ -475,10 +475,11 @@
     color: green;
     padding-left: 0.4em;
     font-size: 15px;
-    margin-top: 1px;
+    margin-top: auto;
   }
-  .footer_box_card i {
+  .footer_box_card h4 {
+    font-size: large;
+    font-weight: 400;
     margin: auto;
-    padding: auto;
   }
 }
