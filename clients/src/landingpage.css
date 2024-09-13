@@ -85,6 +85,42 @@
 .landingpage_center button:hover {
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .landingpage_center h3 {
+    font-size: 1.5em;
+  }
+
+  .landingpage_center h1 {
+    font-size: 2.2em;
+  }
+
+  .landingpage_center h6 {
+    font-size: 1em;
+  }
+
+  .landingpage_center button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 480px) {
+  .landingpage_center h3 {
+    font-size: 1.5em;
+  }
+
+  .landingpage_center h1 {
+    font-size: 2em;
+  }
+
+  .landingpage_center h6 {
+    font-size: 0.6em;
+  }
+
+  .landingpage_center button {
+    font-size: 0.6em;
+    padding: 6px 14px;
+  }
+}
 
 /*.. About Section Style ..*/
 
@@ -113,12 +149,13 @@
 .About_card_2 h3 {
   font-size: 70px;
   font-weight: bolder;
+  margin: auto;
 }
 
 .About_card_1 img {
   width: 95%;
   object-fit: cover;
-  height: auto;
+  height: 100%;
 }
 .About_card1 {
   display: flex;
@@ -131,14 +168,8 @@
 .About_card2_box p {
   color: black;
 }
-.About_card2_box h4 {
-  font-family: "Vladimir Script", cursive;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+.About_card2_box h5 {
+  text-align: left;
 }
 .About_card2_box img {
   width: 60px;
@@ -285,6 +316,45 @@
   color: white;
   margin-top: 1em;
   padding: 0.4em;
+}
+@media (max-width: 768px) {
+  .Galley_card1,
+  .Galley_card2,
+  .Galley_card3,
+  .Galley_card4,
+  .Galley_card5,
+  .Galley_card6 {
+    width: 85%; /* Cards will take full width on small screens */
+    height: 40vh;
+    margin: auto;
+  }
+
+  .Galley_card p {
+    font-size: 0.9em; /* Adjust font size for mobile */
+    padding: 0.3em; /* Adjust padding for better spacing on mobile */
+  }
+}
+
+/* Very small mobile view (screen width <= 480px) */
+@media (max-width: 480px) {
+  .Galley h1 {
+    font-size: 1em; /* Adjust the heading size for smaller screens */
+  }
+
+  .Galley_card1,
+  .Galley_card2,
+  .Galley_card3,
+  .Galley_card4,
+  .Galley_card5,
+  .Galley_card6 {
+    height: 30vh;
+    width: 85%;
+    margin: auto;
+  }
+
+  .Galley_card p {
+    font-size: 0.8em; /* Further reduce font size */
+  }
 }
 
 /*... Modal Section...*/

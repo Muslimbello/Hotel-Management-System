@@ -32,7 +32,6 @@ const About = () => {
             </p>
             <img src={image1} />
             <h5>Ilonuba Chukwudi</h5>
-            <h4>chukwudi</h4>
             <p>Hotel Maneger</p>
           </div>
         </div>
