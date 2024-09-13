@@ -1,5 +1,3 @@
-module.exports = {
- rules: {
-  "react/react-in-jsx-scope": "off",
- },
+export const rules = {
+ "react/react-in-jsx-scope": "off",
 };
