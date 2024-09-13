@@ -1,5 +1,5 @@
 .env
 Pipfile
 Pipfile.lock
-package-lock.json
-node_modules
+/clients/node_modules
+/clients/package-lock.json
