@@ -424,27 +424,24 @@
 /*.. Footer Section Style ..*/
 
 .Footer {
-  height: 50vh;
+  height: 100%;
   background-color: gray;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
   padding-top: 1em;
+  margin-top: 1em;
+  color: white;
 }
 .footer_box {
   display: flex;
   width: 85%;
-  justify-content: space-around;
   gap: 1em;
+  flex-wrap: wrap;
+  margin: auto;
 }
 .footer_box_card1 {
   width: 30%;
 }
 .footer_box_card {
-  width: 30%;
-}
-.footer_box_card p {
-  color: black;
+  width: 20%;
 }
 .footer_box_card i {
   color: green;
@@ -454,4 +451,34 @@
 .footer_box_card h4 {
   font-size: larger;
   font-weight: 600;
+}
+.last {
+  padding-top: 0.5em;
+  border-top: 1px solid black;
+  margin-top: 1em;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .footer_box {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+  .footer_box_card1 {
+    width: 100%;
+  }
+  .footer_box_card {
+    width: 100%;
+    padding-top: 1em;
+  }
+  .footer_box_card i {
+    color: green;
+    padding-left: 0.4em;
+    font-size: 15px;
+    margin-top: 1px;
+  }
+  .footer_box_card i {
+    margin: auto;
+    padding: auto;
+  }
 }
