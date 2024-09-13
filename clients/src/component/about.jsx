@@ -1,9 +1,8 @@
+
 import image from "../Images/ground.jpg";
 import image1 from "../Images/image.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import React from "react";
-import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="About">
