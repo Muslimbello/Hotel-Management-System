@@ -1,4 +1,6 @@
 import image from "../Images/family-room.png";
+import React from "react";
+import image1 from "../Images/image.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 const About = () => {
   return (

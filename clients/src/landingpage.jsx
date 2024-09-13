@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { useState } from "react";
 import "./landingpage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
