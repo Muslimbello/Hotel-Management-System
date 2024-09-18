@@ -33,7 +33,10 @@ SECRET_KEY = "django-insecure-kdyke&)&nj5$u88yz#0%u*x-sj4vpkbk&vqdo^j&%sf^c6%41g
 DEBUG = True
 
 
-ALLOWED_HOSTS = ["BG$.onrender.com"]
+ALLOWED_HOSTS = [
+    "BG$.onrender.com",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -83,36 +86,19 @@ TEMPLATES = [
 WSGI_APPLICATION = "hotel_booking.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": os.environ["DB_NAME"],
-#         "USER": os.environ["DB_USER"],
-#         "PASSWORD": os.environ["DB_PASSWORD"],
-#         "HOST": os.environ["DB_HOST"],
-#         "PORT": os.environ["DB_PORT"],
-#     }
-# }
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-# DATABASES = {"default": dj_database_url.config(conn_max_age=600)}
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("DB_NAME", "your_local_db_name"),
-        "USER": os.environ.get("DB_USER", "your_local_db_user"),
-        "PASSWORD": os.environ.get("DB_PASSWORD", "your_local_db_password"),
-        "HOST": os.environ.get("DB_HOST", "localhost"),
-        "PORT": os.environ.get("DB_PORT", "5432"),
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": os.getenv("DB_HOST", "db"),  # 'db' is the default for Docker
+        "PORT": os.getenv("DB_PORT", "5432"),
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
 }
 
 # Use dj_database_url for Render or cloud deployment

@@ -1,0 +1,13 @@
+dj-database-url==2.2.0       # For configuring the database URL
+Django==4.0.6                # Django core framework
+django-allauth==0.63.3        # Authentication system
+django-configurations==2.5.1  # For environment-based settings
+django-cors-headers==4.4.0
+djangorestframework==3.14.0   # Django REST framework for APIs
+djangorestframework-simplejwt==5.3.1 # JWT authentication with DRF
+drf-yasg==1.21.7
+psycopg==3.2.1            # API documentation with Swagger
+python-dotenv==1.0.1          # For managing environment variables
+
+PyJWT==2.8.0                  # JWT handling
+requests==2.32.3              # HTTP requests library

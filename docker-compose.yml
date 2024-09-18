@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  # Django Service
+  web:
+    build: ./backend  # Directory containing Django Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  # Postgres Database Service
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: adewale@2007
+      POSTGRES_DB: hotel
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # React Service
+  clients:
+    build: ./clients  # Directory containing React Dockerfile
+    volumes:
+      - ./clients:/app
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:

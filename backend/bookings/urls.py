@@ -4,8 +4,12 @@ from django.conf.urls.static import static
 from .views import HotelListCreateView, HotelRetrieveUpdateDestroyView
 
 urlpatterns = [
-    path('hotels/', HotelListCreateView.as_view(), name='hotel-list-create'),
-    path('hotels/<int:pk>/', HotelRetrieveUpdateDestroyView.as_view(), name='hotel-detail'),
+    path("clients/", HotelListCreateView.as_view(), name="hotel-list-create"),
+    path(
+        "client/<int:pk>/",
+        HotelRetrieveUpdateDestroyView.as_view(),
+        name="hotel-detail",
+    ),
 ]
 
 
