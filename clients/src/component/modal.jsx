@@ -30,16 +30,6 @@ const CustomModal = ({ show, handleClose }) => {
       return; // Exit the function if validation fails
     }
     // Make a POST request to the server with user data
-    console.log(
-      clientName,
-      address,
-      phone,
-      roomNumber,
-      roomType,
-      checkInDate,
-      checkOutDate
-    );
-    alert("successfull");
     try {
       await axios.post("https://localhost:8000/modal/", {
         clientName,
@@ -164,9 +154,6 @@ const CustomModal = ({ show, handleClose }) => {
       <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>
           Close
-        </Button>
-        <Button variant="primary" onClick={handleClose}>
-          Save
         </Button>
       </Modal.Footer>
     </Modal>
