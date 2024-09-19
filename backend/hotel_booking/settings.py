@@ -81,32 +81,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "hotel_booking.wsgi.application"
+WSGI_APPLICATION = "hotel_management.wsgi.application"
 
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "hotel",
-        "USER": "postgres",
-        "PASSWORD": "adewale@2007",
-        "HOST": "db",  # 'db' is the default for Docker
-        "PORT": "5432",
-    }
-}
-# "default": {
-#     "ENGINE": "django.db.backends.sqlite3",
-#     "NAME": BASE_DIR / "db.sqlite3",
-# }
-# }
-
-DATABASES = {"default": dj_database_url.config(default=os.getenv("DATABASE_URL"))}
-# Use dj_database_url for Render or cloud deployment
-# if os.getenv(
-#     "RENDER_DATABASE_URL"
-# ):  # or any condition that distinguishes your prod environment
-#     DATABASES["default"] = dj_database_url.config(conn_max_age=600)
-# Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -163,8 +141,8 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=90),
 }
 # CORS
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    # Add your production frontend URL here when deploying
-]
+CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS_DEPLOY")
+CORS_ALLOWED_WHITELIST = env.list("CORS_ALLOWED_WHITELIST_DEPLOY")
+# CSRF
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS_DEPLOY")
 AUTH_USER_MODEL = "app_auth.User"
