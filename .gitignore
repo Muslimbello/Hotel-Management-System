@@ -1,4 +1,4 @@
-.env
+# .env
 Pipfile
 Pipfile.lock
 /clients/node_modules
