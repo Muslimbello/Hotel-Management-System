@@ -11,6 +11,9 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    env:
+      - .env
+
 
   # Postgres Database Service
   db:
@@ -21,6 +24,7 @@ services:
       POSTGRES_DB: hotel
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
     ports:
       - "5432:5432"
 
