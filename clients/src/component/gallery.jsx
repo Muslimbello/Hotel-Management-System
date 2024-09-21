@@ -1,7 +1,7 @@
 import React from "react";
 const Gallery = () => {
   return (
-    <div className="Galley">
+    <div className="Galley" id="Gallery">
       <h1>Welcome to the BG & C Gallery</h1>
       <div className="Galley_card">
         <div className="Galley_card1">

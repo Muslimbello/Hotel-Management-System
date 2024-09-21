@@ -4,7 +4,7 @@ import image1 from "../Images/image.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 const About = () => {
   return (
-    <div className="About">
+    <div className="About" id="About">
       <h2>About</h2>
       <div className="About_box">
         <div className="About_card_1">

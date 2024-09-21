@@ -16,7 +16,7 @@ const Landingpage = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
+    <div id="home">
       <div className="slider">
         <div className="load"></div>
         <div className="content">
@@ -38,8 +38,8 @@ const Landingpage = () => {
                     {/* Navigation Links */}
                     <Nav className="justify-content-end flex-grow-1 pe-3">
                       <Nav.Link href="#home">Home</Nav.Link>
-                      <Nav.Link href="#gallery">Gallery</Nav.Link>
-                      <Nav.Link href="#gallery">About us</Nav.Link>
+                      <Nav.Link href="#Gallery">Gallery</Nav.Link>
+                      <Nav.Link href="#About">About us</Nav.Link>
                     </Nav>
                   </Offcanvas.Body>
                 </Navbar.Offcanvas>
