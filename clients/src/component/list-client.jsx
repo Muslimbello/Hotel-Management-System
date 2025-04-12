@@ -30,30 +30,30 @@ const List = () => {
   }
 
   return (
-    <div className="Booking">
+    <div className="List">
       <h3>Bookings</h3>
-      <table border="1">
-        <thead>
+      <table border="1" className="list-table">
+        <thead className="list-table-head">
           <tr>
-            <th>Client Name</th>
-            <th>Address</th>
-            <th>Phone</th>
-            <th>Room Number</th>
-            <th>Room Type</th>
-            <th>Check-in Date</th>
-            <th>Check-out Date</th>
+            <th className="list-table-row">Client Name</th>
+            <th className="list-table-row">Address</th>
+            <th className="list-table-row">Phone</th>
+            <th className="list-table-row">Room Number</th>
+            <th className="list-table-row">Room Type</th>
+            <th className="list-table-row">Check-in Date</th>
+            <th className="list-table-row">Check-out Date</th>
           </tr>
         </thead>
         <tbody>
           {bookings.map((booking) => (
             <tr key={booking.id}>
-              <td>{booking.clientName}</td>
-              <td>{booking.address}</td>
-              <td>{booking.phone}</td>
-              <td>{booking.roomNumber}</td>
-              <td>{booking.roomType}</td>
-              <td>{booking.checkInDate}</td>
-              <td>{booking.checkOutDate}</td>
+              <td className="list-table-body">{booking.clientName}</td>
+              <td className="list-table-body">{booking.address}</td>
+              <td className="list-table-body">{booking.phone}</td>
+              <td className="list-table-body">{booking.roomNumber}</td>
+              <td className="list-table-body">{booking.roomType}</td>
+              <td className="list-table-body">{booking.checkInDate}</td>
+              <td className="list-table-body">{booking.checkOutDate}</td>
             </tr>
           ))}
         </tbody>

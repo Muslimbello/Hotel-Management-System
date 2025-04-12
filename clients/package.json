@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_ENV=production react-scripts build",
+    "build": "NODE_OPTIONS=--opessl-legacy-provider",
     "build:prod": "ESLINT_NO_DEV=true npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

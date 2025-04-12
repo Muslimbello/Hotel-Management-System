@@ -31,7 +31,7 @@ const CustomModal = ({ show, handleClose }) => {
     }
     // Make a POST request to the server with user data
     try {
-      await axios.post("https://localhost:8000/modal/", {
+      await axios.post("https://localhost:8000/api/auth/booking/", {
         clientName,
         address,
         phone,

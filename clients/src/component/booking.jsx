@@ -26,18 +26,8 @@ const Booking = () => {
       return; // Exit the function if validation fails
     }
     // Make a POST request to the server with user data
-    console.log(
-      clientName,
-      address,
-      phone,
-      roomNumber,
-      roomType,
-      checkInDate,
-      checkOutDate
-    );
-    alert("successfull");
     try {
-      await axios.post("https://localhost:8000/booking/", {
+      await axios.post("https://localhost:8000/api/auth/booking/", {
         clientName,
         address,
         phone,
@@ -68,7 +58,6 @@ const Booking = () => {
           <input
             type="text"
             placeholder="Full Name"
-            value={clientName}
             onChange={(e) => {
               setClientName(e.target.value);
             }}
@@ -78,7 +67,6 @@ const Booking = () => {
           <p>Customers Address</p>
           <input
             type="text"
-            value={address}
             onChange={(e) => {
               setAddress(e.target.value);
             }}
@@ -90,7 +78,6 @@ const Booking = () => {
           <input
             type="tel"
             id="phone"
-            value={phone}
             onChange={(e) => {
               setPhone(e.target.value);
             }}
@@ -100,7 +87,6 @@ const Booking = () => {
         <div className="Booking_input3">
           <p>Select Room Type</p>
           <select
-            value={roomType}
             onChange={(e) => {
               setRoomType(e.target.value);
             }}
@@ -113,7 +99,6 @@ const Booking = () => {
         <div className="Booking_input3">
           <p>Select Room number</p>
           <select
-            value={roomNumber}
             onChange={(e) => {
               setRoomNumber(e.target.value);
             }}
